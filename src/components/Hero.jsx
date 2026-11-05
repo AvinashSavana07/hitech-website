@@ -39,19 +39,17 @@ export default function Hero({ onOpenQuoteModal }) {
         backgroundImage: `url('/hero_engineer.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 30%',
-        opacity: 0.35,
-        filter: 'contrast(1.2)'
+        opacity: 0.65
       }} />
 
-      {/* Solid Black Overlay */}
+      {/* Natural Dark Gradient Overlay for Crisp Text Readability */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: '#000000',
-        opacity: 0.7
+        background: 'linear-gradient(to right, #000000 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.55) 100%)'
       }} />
 
       {/* Main Content */}
