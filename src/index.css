@@ -1,0 +1,320 @@
+:root {
+  --yellow-primary: #FFCF01;
+  --black-primary: #000000;
+  --white-primary: #FFFFFF;
+
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-btn: 8px;
+  --radius-card: 12px;
+  --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+  color: var(--black-primary);
+  background-color: var(--white-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* Typography Specifications */
+h1, .h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--black-primary);
+}
+
+h2, .h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--black-primary);
+}
+
+h3, .h3 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--black-primary);
+}
+
+h4, .h4 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--black-primary);
+}
+
+p, .body-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black-primary);
+}
+
+/* Strictly 3 Color Badges */
+.badge-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFCF01;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000000;
+  color: #FFCF01;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid #FFCF01;
+}
+
+/* Industrial Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #FFCF01;
+  color: #000000;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 800;
+  padding: 16px 32px;
+  border-radius: var(--radius-btn);
+  border: 2px solid #FFCF01;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: #000000;
+  color: #FFCF01;
+  border-color: #FFCF01;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: var(--radius-btn);
+  border: 2px solid #000000;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: #FFCF01;
+  color: #000000;
+  border-color: #FFCF01;
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: var(--radius-btn);
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-outline-white:hover {
+  background-color: #FFCF01;
+  color: #000000;
+  border-color: #FFCF01;
+  transform: translateY(-2px);
+}
+
+/* Engineering Section Containers */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.yellow-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #FFCF01;
+  z-index: -1;
+}
+
+/* High Contrast Card Styling */
+.industrial-card {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: var(--radius-card);
+  padding: 32px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.industrial-card:hover {
+  transform: translateY(-6px);
+  border-color: #FFCF01;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.industrial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 0%;
+  background-color: #FFCF01;
+  transition: height 0.3s ease;
+}
+
+.industrial-card:hover::before {
+  height: 100%;
+}
+
+/* Client Logo Carousel Keyframes */
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll-track {
+  display: flex;
+  width: max-content;
+  animation: logoScroll 25s linear infinite;
+}
+
+.infinite-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* Fluid Responsive Typography & Mobile Rules */
+@media (max-width: 1024px) {
+  h1, .h1 {
+    font-size: 48px;
+  }
+  h2, .h2 {
+    font-size: 38px;
+  }
+  h3, .h3 {
+    font-size: 28px;
+  }
+  .section-container {
+    padding: 70px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, .h1 {
+    font-size: 36px !important;
+    line-height: 1.15 !important;
+  }
+  h2, .h2 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+  h3, .h3 {
+    font-size: 22px !important;
+  }
+  h4, .h4 {
+    font-size: 20px !important;
+  }
+  body {
+    font-size: 16px;
+  }
+  p, .body-text {
+    font-size: 16px;
+  }
+  .section-container {
+    padding: 50px 16px !important;
+  }
+  .section-header {
+    margin-bottom: 36px !important;
+  }
+  .industrial-card {
+    padding: 24px !important;
+  }
+  .btn-primary, .btn-secondary, .btn-outline-white {
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, .h1 {
+    font-size: 30px !important;
+  }
+  h2, .h2 {
+    font-size: 24px !important;
+  }
+  .badge-yellow, .badge-dark {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
